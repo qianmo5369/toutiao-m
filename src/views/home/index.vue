@@ -2,15 +2,16 @@
  * @Author: milk
  * @Date: 2022-06-25 20:27:33
  * @LastEditors: 495305046@qq.com
- * @LastEditTime: 2022-06-29 18:35:31
+ * @LastEditTime: 2022-06-29 20:11:37
  * @Description: 
  * WeChat:qianmo5269
 -->
 <template>
     <div class="home-container">
         <!-- 头部导航 -->
-        <van-nav-bar class="page-nav-bar">
-            <van-button class="search-btn" slot="title" type="info" size="small" round icon="search">搜索</van-button>
+        <van-nav-bar class="page-nav-bar" fixed>
+            <van-button class="search-btn" slot="title" type="info" size="small" round icon="search">搜索
+            </van-button>
         </van-nav-bar>
         <!-- 频道列表 -->
         <van-tabs class="channel-tab" animated swipeable v-model="active">
@@ -62,6 +63,7 @@ export default {
 
 <style scoped lang="less">
 .home-container {
+    padding-top: 174px;
     padding-bottom: 100px;
     .van-nav-bar__title {
         // max-width: unset!important;
@@ -82,6 +84,11 @@ export default {
 
     /deep/ .channel-tab {
         .van-tabs__wrap {
+            position: fixed;
+            right: 0;
+            top: 92px;
+            left: 0;
+            z-index: 1;
             height: 82px;
         }
 
