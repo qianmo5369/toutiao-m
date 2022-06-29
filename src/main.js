@@ -12,6 +12,9 @@ import 'vant/lib/index.css'
 // 加载全局样式
 import './styles/index.less'
 
+// 加载移动端适配
+import 'amfe-flexible'
+
 // 注册使用 Vant组件库
 Vue.use(Vant)
 
